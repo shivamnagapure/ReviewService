@@ -2,13 +2,6 @@ package com.shivam.UberReviewService.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SourceType;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import java.util.Date;
 
 /*
     @Entity : 1. tell JPA provider (Hibernate) to map class in database as table.
@@ -24,13 +17,14 @@ import java.util.Date;
     @NoArgsConstructor : if any other constructor is created then ,we must have to create no argument constructor
  */
 
+@Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "booking_review")
-@Inheritance(strategy = InheritanceType.JOINED)
-public class Review extends BaseModel{
+@Inheritance(strategy = InheritanceType.JOINED) // Defines how JPA maps an inheritance hierarchy into DB tables.
+public class BookingReview extends BaseModel{
 
     //cascade decides how operations applied on one entity should be propagated/affected to related entities .
     @OneToOne(cascade = {CascadeType.PERSIST , CascadeType.REMOVE} , fetch = FetchType.LAZY)

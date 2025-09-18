@@ -32,15 +32,12 @@ public class Booking extends BaseModel{
         to solve this we use mapped , which refers Owner class having foreign key
      */
 
-/*
-    Lazy Fetch (FetchType.LAZY)
-    Default for: @OneToMany, @ManyToMany
-    Means the related data is not loaded immediately.
-
-    Eager Fetch (FetchType.EAGER)
-    Default for: @ManyToOne, @OneToOne
-    Means the related entity is always fetched along with the parent (via JOIN).
-*/
+    /*
+       FetchType:
+       - LAZY: load only when accessed (default for OneToMany/ManyToMany).
+       - EAGER: load immediately with parent (default for ManyToOne/OneToOne).
+       → Use LAZY for performance, EAGER only if always needed.
+    */
     @ManyToOne(fetch = FetchType.LAZY)
     private Driver driver ; //it stores Driver table primary key as foreign key in Booking table
 

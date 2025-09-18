@@ -14,7 +14,6 @@ public interface BookingRepository extends JpaRepository<Booking , Long> {
 
     List<Booking> findAllByDriverIn(List<Driver> drivers);
 
-
     @Query("SELECT b FROM Booking b JOIN FETCH b.driver WHERE b.id IN :ids ")
     List<Booking> findByIdInWithDriver(@Param("ids") List<Long> ids);
 }

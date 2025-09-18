@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
 @Entity
-public class PassengerReview extends Review {
+public class PassengerReview extends BookingReview {
 
     @Column(nullable = false)
     private String passengerReviewContent ;
