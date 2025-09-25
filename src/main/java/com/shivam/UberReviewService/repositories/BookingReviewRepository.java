@@ -1,6 +1,6 @@
 package com.shivam.UberReviewService.repositories;
 
-import com.shivam.UberReviewService.models.BookingReview;
+import com.example.uberprojectentityservice.models.BookingReview;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookingReviewRepository extends JpaRepository<BookingReview, Long> {
 
+    BookingReview findBookingReviewById(Long id);
 }

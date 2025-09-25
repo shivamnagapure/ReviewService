@@ -1,8 +1,8 @@
 package com.shivam.UberReviewService.adapters;
 
+import com.example.uberprojectentityservice.models.Booking;
+import com.example.uberprojectentityservice.models.BookingReview;
 import com.shivam.UberReviewService.dto.CreateReviewDto;
-import com.shivam.UberReviewService.models.Booking;
-import com.shivam.UberReviewService.models.BookingReview;
 import com.shivam.UberReviewService.services.BookingService;
 
 import org.springframework.stereotype.Component;
@@ -26,3 +26,4 @@ public class CreateRevToBookingReviewImpl implements CreateRevToBookingReview{
                 .build();
     }
 }
+

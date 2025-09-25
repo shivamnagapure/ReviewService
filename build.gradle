@@ -22,6 +22,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -35,8 +36,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-	implementation 'org.flywaydb:flyway-core:9.22.3'
-	implementation 'org.flywaydb:flyway-mysql:9.22.3'
+    implementation "com.example:common-db:0.0.2-SNAPSHOT"
 }
 
 tasks.named('test') {

@@ -1,7 +1,7 @@
 package com.shivam.UberReviewService.utils;
 
+import com.example.uberprojectentityservice.models.BookingReview;
 import com.shivam.UberReviewService.dto.ReviewResponseDto;
-import com.shivam.UberReviewService.models.BookingReview;
 
 public class Response {
 

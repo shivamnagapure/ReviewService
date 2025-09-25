@@ -1,6 +1,6 @@
 package com.shivam.UberReviewService.services;
 
-import com.shivam.UberReviewService.models.Booking;
+import com.example.uberprojectentityservice.models.Booking;
 import com.shivam.UberReviewService.repositories.BookingRepository;
 import org.springframework.stereotype.Service;
 
